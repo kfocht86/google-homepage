@@ -1,0 +1,1 @@
+This is the first Odin project assignment.  I will be editing the google homepage using developer tools.
