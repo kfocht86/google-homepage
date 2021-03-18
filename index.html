@@ -9,6 +9,7 @@
         }
         a {
             padding: 0, 10px, 0, 10px;
+            font-size: 14px;
         }
         .pos {
             position: absolute;
@@ -25,14 +26,17 @@
             color: #000000;
         }
         .btm {
-            color: #dcdcdc;
-        }
+            color: #000000;
+            background-color: #dcdcdc;
+            }
         #button {
             color: #ffffff;
             background-color: #4169e1;
             }
         #logo {
-            justify-content: center;
+            position: absolute;
+            top: 30%;
+            right: 50%;
             }
         #ftr1 {
             bottom: 0;
@@ -54,20 +58,24 @@
             <a ref="https://accounts.google.com" id="button">Sign In</a>
         </div>
         <div id="logo" class="pos">
-            <a ref="https://google.com"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"> alt="The Google logo"></a>
+            <a ref="https://google.com"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo"></a>
         </div>
         <div>
-            <form action="#">
+            <form action="https://google.com">
                 <input type="text" placeholder="Search Google">
-                <button type="submit">This buttom submits</button>
-                <button type="random">This button randomizes the search</button>
+                <button type="submit">Google Search</button>
+                <button type="random">I'm Feeling Lucky</button>
             </form>
         </div>
         <div id="ftr1" class="btm">
             <a ref="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/" class="black">Advertising</a>
-            <a ref="" class="black">Business
-
-                
-            </a>
+            <a ref="https://smallbusiness.withgoogle.com/" class="black">Business</a>
+            <a ref="https://www.google.com/search/howsearchworks/?fg=1" class="black">How Search Works</a>
+        </div>
+        <div id="ftr2" class="btm black">
+            <a ref="#">Privacy</a>
+            <a ref="#">Terms</a>
+            <a ref="#">Settings</a> 
         </div>
     </body>
+  
