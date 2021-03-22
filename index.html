@@ -28,16 +28,44 @@
         .btm {
             color: #000000;
             background-color: #dcdcdc;
+            padding-bottom: 10px;
             }
+        .top {
+            padding-top: 20px;
+        }
+        .left {
+            margin-left: 15px;
+        }
+        .right {
+            margin-right: 15px;
+        }
         #button {
             color: #ffffff;
             background-color: #4169e1;
+            margin: 0 30px 0 10px;
+            padding: 8px 12px;
             }
         #logo {
             position: absolute;
             top: 30%;
             right: 50%;
             }
+        #search {
+            position: absolute;
+            top: 40%;
+            right: 50%;
+            width: 50%;
+            height:30px;
+            margin: 0 0 25px 0;
+        }
+        #ftr {
+            height:40px;
+            width: 100%;
+            background-color: #dcdcdc;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+        }
         #ftr1 {
             bottom: 0;
             left: 0;
@@ -46,13 +74,16 @@
             bottom: 0;
             right: 0;
         }
+        .z-in {
+            z-index: 1;
+        }
         </style>
     <body>
-        <div id="ref1" class="pos">
+        <div id="ref1" class="pos top">
             <a ref="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" class="black">About</a>
             <a ref="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US" class="black">Store</a>
         </div>
-        <div id="ref2" class="pos">
+        <div id="ref2" class="pos top">
             <a ref="https://mail.google.com" class="black">Gmail</a>
             <a ref="https://google.com/imghp?hl=en&ogbl" class="black">Images</a>
             <a ref="https://accounts.google.com" id="button">Sign In</a>
@@ -61,21 +92,22 @@
             <a ref="https://google.com"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo"></a>
         </div>
         <div>
-            <form action="https://google.com">
+            <form action="https://google.com" id= "search" class="pos">
                 <input type="text" placeholder="Search Google">
                 <button type="submit">Google Search</button>
                 <button type="random">I'm Feeling Lucky</button>
             </form>
-        </div>
-        <div id="ftr1" class="btm">
-            <a ref="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/" class="black">Advertising</a>
-            <a ref="https://smallbusiness.withgoogle.com/" class="black">Business</a>
-            <a ref="https://www.google.com/search/howsearchworks/?fg=1" class="black">How Search Works</a>
-        </div>
-        <div id="ftr2" class="btm black">
-            <a ref="#">Privacy</a>
-            <a ref="#">Terms</a>
-            <a ref="#">Settings</a> 
+        </div id="ftr">
+            <div id="ftr1" class="pos z-in btm">
+                <a ref="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/" class="black">Advertising</a>
+                <a ref="https://smallbusiness.withgoogle.com/" class="black">Business</a>
+                <a ref="https://www.google.com/search/howsearchworks/?fg=1" class="black">How Search Works</a>
+            </div>
+            <div id="ftr2" class="pos z-in btm">
+                <a ref="#">Privacy</a>
+                <a ref="#">Terms</a>
+                <a ref="#">Settings</a> 
+            </div>
         </div>
     </body>
   
