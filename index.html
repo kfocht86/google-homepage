@@ -6,10 +6,18 @@
     <style>
         body {
             font-family: Arial, monospace;
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
         a {
             padding: 0, 10px, 0, 10px;
-            font-size: 14px;
+            font-size: 15px;
+        }
+        #main {
+            text-align: center;
+            margin-top: 15%;
+            padding-bottom: 15%;
         }
         .pos {
             position: absolute;
@@ -17,10 +25,12 @@
         #ref1 {
             top: 0;
             left: 0;
+            z-index: 1;
         }
         #ref2 {
             top: 0;
             right: 0;
+            z-index: 1;
         }
         .black {
             color: #000000;
@@ -31,13 +41,19 @@
             padding-bottom: 10px;
             }
         .top {
-            padding-top: 20px;
+            display: block;
+            position: absolute;
+            margin: 7px 0 0 10px;
         }
         .left {
-            margin-left: 15px;
+            display: inline-block;
+            padding: 5px;
+            margin: 0 5px;
         }
         .right {
-            margin-right: 15px;
+            display: inline-block;
+            padding: 5px;
+            margin: 0 5px;
         }
         #button {
             color: #ffffff;
@@ -45,18 +61,30 @@
             margin: 0 30px 0 10px;
             padding: 8px 12px;
             }
+        .button {
+            margin: 0 30px 0 10px;
+            padding: 8px 12px;
+            background-color: #f8f9fa;
+            border: none;
+            font-family: arial, sans-serif;
+            font-size: 14px;
+            }
         #logo {
-            position: absolute;
-            top: 30%;
-            right: 50%;
+            margin-bottom: 80px;
             }
         #search {
-            position: absolute;
-            top: 40%;
-            right: 50%;
-            width: 50%;
-            height:30px;
-            margin: 0 0 25px 0;
+            position: relative;
+            padding-inline-end: 44px;
+            padding-inline-start: 52px;
+            padding: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 100%;
+            width: 40%;
+            font-size: 16px;
+            border: 1px solid #e2e2e2;
+            border-radius: 25px; 
+            box-shadow: 0px 3px 2px #e2e2e2e2;
         }
         #ftr {
             height:40px;
@@ -69,34 +97,32 @@
         #ftr1 {
             bottom: 0;
             left: 0;
+            z-index: 1;
         }
         #ftr2 {
             bottom: 0;
             right: 0;
-        }
-        .z-in {
             z-index: 1;
         }
         </style>
     <body>
-        <div id="ref1" class="pos top">
+        <div id="ref1" class="pos top left">
             <a ref="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" class="black">About</a>
             <a ref="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US" class="black">Store</a>
         </div>
-        <div id="ref2" class="pos top">
+        <div id="ref2" class="pos top right">
             <a ref="https://mail.google.com" class="black">Gmail</a>
             <a ref="https://google.com/imghp?hl=en&ogbl" class="black">Images</a>
             <a ref="https://accounts.google.com" id="button">Sign In</a>
         </div>
-        <div id="logo" class="pos">
+        <div id="main">
             <a ref="https://google.com"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo"></a>
-        </div>
-        <div>
-            <form action="https://google.com" id= "search" class="pos">
-                <input type="text" placeholder="Search Google">
-                <button type="submit">Google Search</button>
-                <button type="random">I'm Feeling Lucky</button>
+            <form action="https://google.com">
+                <input id="search" type="search" placeholder="Search Google or type a URL"><br>
+                <input type="button" name="Search" class="button" value="Google Search">
+                <input type="button" name="Random" class="button" value="I'm Feeling Lucky">
             </form>
+        </div>
         </div id="ftr">
             <div id="ftr1" class="pos z-in btm">
                 <a ref="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/" class="black">Advertising</a>
